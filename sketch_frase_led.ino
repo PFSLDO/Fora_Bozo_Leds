@@ -1,4 +1,5 @@
 int ledDelay;
+int ledDelayoff;
 int ledPin[] = {3, 4, 5, 6, 7, 8, 9, 10, 11};
 int potPin = 2;
 
@@ -10,6 +11,7 @@ void setup() {
 
 void loop() {
 ledDelay = 2 * analogRead(potPin);
+ledDelayoff = 15100;
 //F
 digitalWrite(ledPin[1], HIGH);
 digitalWrite(ledPin[2], HIGH);
@@ -438,4 +440,14 @@ digitalWrite(ledPin[6], HIGH);
 digitalWrite(ledPin[7], HIGH);
 digitalWrite(ledPin[8], HIGH);
 delay(ledDelay);
+//Espaço
+digitalWrite(ledPin[1], LOW);
+digitalWrite(ledPin[2], LOW);
+digitalWrite(ledPin[3], LOW);
+digitalWrite(ledPin[4], LOW);
+digitalWrite(ledPin[5], LOW);
+digitalWrite(ledPin[6], LOW);
+digitalWrite(ledPin[7], LOW);
+digitalWrite(ledPin[8], LOW);
+delay(ledDelayoff);
 }
